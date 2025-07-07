@@ -1,0 +1,48 @@
+Q. if i want to push my code to origin but not main, so for this can we have any shortcut like git push 
+
+
+ChatGPT said:
+Yes! Git does allow shortcuts for pushing to branches other than main — here’s how you can do it effectively:
+
+✅ Situation:
+You're working on a different branch (e.g., feature-1), and you want to push that branch to the remote (origin), not main.
+
+👇 Shortcut Commands You Can Use:
+✅ 1. First Push with Tracking:
+bash
+Copy
+Edit
+git push -u origin feature-1
+Pushes feature-1 to origin
+
+-u sets the upstream tracking branch (so next time you can just do git push)
+
+✅ After this, you don’t need to type the branch name again.
+
+✅ 2. Push After Tracking is Set:
+bash
+Copy
+Edit
+git push
+Works if you're already on feature-1
+
+Pushes only your current branch to the tracked remote
+
+✅ 3. Push Any Branch Without Tracking:
+bash
+Copy
+Edit
+git push origin your-branch-name
+This does not set upstream tracking, so you’ll have to type the branch every time.
+
+✅ Bonus: Rename & Push New Branch
+bash
+Copy
+Edit
+git checkout -b new-branch
+git push -u origin new-branch
+🧠 Summary:
+Task	Command
+First push to new branch	git push -u origin branch-name
+Push again later (same branch)	git push
+Push without tracking setup	git push origin branch-name
