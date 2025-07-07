@@ -3,3 +3,5 @@ bug fix 2
 3rd bug fix
 
 2026
+
+check for git diff --staged
